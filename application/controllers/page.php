@@ -17,11 +17,6 @@ class Page extends CI_Controller {
 	 * View for the controller.
 	 */
 	public function view($page = 'home') {
-		if (!file_exists('application/views/pages/'.$page.'.php')) {
-			// Whoops, we don't have a page for that!
-			show_404();
-		}
-
 		$data['title'] = ucfirst($page);
 
 		$this->load->view('header');
